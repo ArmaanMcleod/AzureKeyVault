@@ -21,5 +21,4 @@ $storageAccount = Get-AzStorageAccount `
 New-AzRoleAssignment `
     -ApplicationId $ApplicationId `
     -RoleDefinitionName 'Storage Account Key Operator Service Role' `
-    -Scope $storageAccount.Id `
-    -
+    -Scope $storageAccount.Id
