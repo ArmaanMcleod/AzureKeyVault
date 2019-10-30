@@ -1,15 +1,15 @@
 [CmdletBinding()]
 param (
     # Resource group Name
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string]
     $ResourceGroupName,
     # Storage account name
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string]
     $StorageAccountName,
     # Key vault name
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string]
     $KeyVaultName
 )

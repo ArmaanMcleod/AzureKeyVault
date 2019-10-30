@@ -1,19 +1,19 @@
 [CmdletBinding()]
 param (
     # Key vault name
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string]
     $KeyVaultName,
     # Resource group name
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string]
     $ResourceGroupName,
     # Virtual machine name
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string]
     $VMName,
     # Key name
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string]
     $KeyName
 )
@@ -34,7 +34,7 @@ $keyEncryptionKeyUrl = (
     Get-AzKeyVaultKey `
         -VaultName $KeyVaultName `
         -Name $KeyName `
-    ).Key.Kid
+).Key.Kid
 
 # Encrypt virtual machine
 Set-AzVMDiskEncryptionExtension `
